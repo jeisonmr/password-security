@@ -1,0 +1,189 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  color: black;
+  
+}
+
+/* --- Header --- */
+
+/* --- Barra de navegacion con logo --- */
+.header-container {
+  width: 100%;
+  height: 100%;
+
+  background-color: #00A0FA;
+}
+.nav-logo {
+  width: 100%;
+  height: 50px;
+  background-color: #FFFFFF;
+
+  display: flex;
+  justify-content: center;
+}
+.nav-logo > img {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+}
+
+/*  --- SVG header superior --- */
+.svg-container {
+  width: 100%;
+  height: 150px;
+}
+.svg-container > img {
+    width: 100%;
+    
+}
+
+/* --- Contenedor del password y botones --- */
+
+.div-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.div-title > h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 50px;
+  color: #FFFFFF;
+}
+.software-container {
+  background-color: transparent;
+  width: 40%;
+  height: 300px;
+
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+/*  --- Password TXT --- */
+.password {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+.password > input {
+  width: 100%;
+  height: 60px;
+  margin: 10px 0;
+}
+
+/*  --- Gereneador de contraseñas y configuracion --- */
+.configuraciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+.configuraciones-top {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+/*  --- Tipo de pass, Generar pass, Copiar pass --- */
+.tipo-seguridad {
+  /* position: absolute; */
+  left: 0;
+  margin: 15px 0 0 15px;
+
+  width: 130px;
+  height: 40px;
+
+  background-color: #41BBFF;
+  color: #FFFFFF;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+.generador-pass { 
+  position: absolute;
+  margin: 15px 50%;
+
+  background-color: #41BBFF;
+  color: #FFFFFF;
+  border-radius: 50%;
+  border-color: #11a9e1;
+}
+.generador-pass > img{
+    width: 30px;
+    height: 30px;
+}
+.copiar-pass {
+  position: absolute;
+  right: 0;
+  margin: 15px 15px 0 0;
+
+  width: 110px;
+  height: 40px;
+
+  background-color: #41BBFF;
+  color: #FFFFFF;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/*  --- Select del nivel de seguridad --- */
+.div-container__nivel{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+}
+.nivel-seguridad{
+    width: 95%;
+    height: 50px;
+    background-color: #0072B1;
+    margin: auto;
+}
+
+/*  ---  */
+.configuraciones-bottom{
+    width: 100%;
+    height: 100rem;
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF;
+    margin-bottom: 100px;
+}
+.seriado{
+    width: 50%;
+    height: 100%;
+}
+.seriado > ul{
+    margin-top: 30px;
+}
+.div-btn__descarga{
+width: 50%;
+position: relative
+}
+.btn-descarga{
+position: absolute;
+bottom: 0;
+right: 0;
+}
+
+/*  --- SVG Header bottom --- */
+.svg-container-bottom{
+    width: 100%;
+    height: 100%;
+}
+.svg-container-bottom > img {
+    width: 100%;
+}
