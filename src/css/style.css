@@ -187,3 +187,67 @@ right: 0;
 .svg-container-bottom > img {
     width: 100%;
 }
+
+
+/*  --- FIN DEL HEDER --- */
+
+
+/*  --- SECTION DESCARGAR --- */
+
+/*  --- Titulo, Descripcion, Promo y Boton --- */
+.descargar-container{
+  width: 100%;
+  }
+  .descargar{
+    display: flex;
+    flex-direction: row;
+  }
+  .title-descargar{
+    width: 50%;
+  }
+  .title-descargar > h1{
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: #00A0FA;
+   font-size: 3rem;
+   margin: 0 0 0 20px;
+  }
+  .title-descargar > h1 ,p, button{
+    margin: 20px 0 0 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .title-descargar > p{
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #53d4ff;
+  }
+  
+  .btn-descargar__windows{
+    margin: 40px 0 0 20px; 
+  
+  width: 180px;
+  height: 35px;
+  
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #0CB7F2;
+  border: none;
+  border-radius: 3px;
+  }
+  
+  .div-logo-grande{
+    width: 50%;
+  }
+  .div-logo-grande > img{
+    width: 95%;
+    height: auto;
+    
+  }
+  
+  /*  --- FIN DE SECTION DESCARGAR --- */
+  
+  
+  /* --- FOOTER --- */
+  
+  /* SVG, Copyright y CONTACTOS */
