@@ -9,10 +9,9 @@ const cararacteresDebil = (value) => {
   for (let i = 0; i < value; i++) {
     carDebil += serie.charAt(Math.floor(Math.random() * serie.length));
   }
-  console.log(`Caracteres : Debil : ${carDebil}`);
-  // return result1;
+  return carDebil;
 };
-cararacteresDebil(5);
+// cararacteresDebil(5);
 
 //  --- Caracteres, Nivel : Medio, Longitud : < 15.
 const caracteresMedio = (value) => {
@@ -21,10 +20,9 @@ const caracteresMedio = (value) => {
   for (let i = 0; i < value; i++) {
     carMedio += serie.charAt(Math.floor(Math.random() * serie.length));
   }
-  console.log(`Caracteres : Medio : ${carMedio}`);
-  // return result1;
+  return carMedio;
 };
-caracteresMedio(10);
+// caracteresMedio(10);
 
 //  --- Caracteres, Nivel : Segura, Longitud : < 23.
 const caracteresSegura = (value) => {
@@ -33,10 +31,9 @@ const caracteresSegura = (value) => {
   for (let i = 0; i < value; i++) {
     carSegura += serie.charAt(Math.floor(Math.random() * serie.length));
   }
-  console.log(`Caracteres : Segura : ${carSegura}`);
-  // return result1;
+  return carSegura;
 };
-caracteresSegura(18);
+// caracteresSegura(18);
 
 //  --- Caracteres, Nivel : Muy Segura, Longitud : < 23.
 const caracteresMuySegura = (value) => {
@@ -45,21 +42,28 @@ const caracteresMuySegura = (value) => {
   for (let i = 0; i < value; i++) {
     carMuySegura += serie.charAt(Math.floor(Math.random() * serie.length));
   }
-  console.log(`Caracteres : Muy Segura : ${carMuySegura}`);
-  // return result1;
+  return carMuySegura;
 };
-caracteresMuySegura(25);
+// caracteresMuySegura(25);
 
 //   :::::: PIN ::::::
 
 //  Tipo: PIN ****, Nivel: Debil, Longitud: < 4.
 const pinCaracteres = (value) => {
   const serie = "!#$%&/(=?)¡¿'-_[+}:{";
-  let pinCaracteres = " ";
+  let pinCaract = " ";
   for (let i = 0; i < value; i++) {
-    pinCaracteres += serie.charAt(Math.floor(Math.random() * serie.length));
+    pinCaract += serie.charAt(Math.floor(Math.random() * serie.length));
   }
-  console.log(`Pin : ${pinCaracteres}`);
-  // return result1;
+  // console.log(`Pin : ${pinCaracteres}`);
+  return pinCaract;
 };
-pinCaracteres(4);
+// pinCaracteres(4);
+
+export {
+  pinCaracteres,
+  cararacteresDebil,
+  caracteresMedio,
+  caracteresSegura,
+  caracteresMuySegura,
+};

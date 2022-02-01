@@ -63,3 +63,12 @@ const pinMinusculas = (value) => {
   // return result1;
 };
 pinMinusculas(4);
+
+
+export{
+  pinMinusculas,
+  minusculasDebil,
+  minusculasMedio,
+  minusculasSegura,
+  minusculasMuySegura
+}

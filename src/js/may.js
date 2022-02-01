@@ -9,11 +9,9 @@ const mayusculasDebil = (value) => {
   for (let i = 0; i < value; i++) {
     mayDebil += serie.charAt(Math.floor(Math.random() * serie.length));
   }
-  console.log(`Mayusculas : Debil : ${mayDebil}`);
-  // return result1;
+  return mayDebil;
 };
-mayusculasDebil(8);
-// console.log(generateRandomString(5));
+// mayusculasDebil(8);
 
 //  --- Mayusculas, Nivel : Medio, Longitud : < 15.
 const mayusculasMedio = (value) => {
@@ -22,10 +20,9 @@ const mayusculasMedio = (value) => {
   for (let i = 0; i < value; i++) {
     mayMedio += serie.charAt(Math.floor(Math.random() * serie.length));
   }
-  console.log(`Mayusculas : Medio : ${mayMedio}`);
-  // return result1;
+  return mayMedio;
 };
-mayusculasMedio(15);
+// mayusculasMedio(15);
 
 //  --- Mayusculas, Nivel : Segura, Longitud : < 23.
 const mayusculasSegura = (value) => {
@@ -34,22 +31,20 @@ const mayusculasSegura = (value) => {
   for (let i = 0; i < value; i++) {
     maySegura += serie.charAt(Math.floor(Math.random() * serie.length));
   }
-  console.log(`Mayusculas : Segura : ${maySegura}`);
-  // return result1;
+  return maySegura;
 };
-mayusculasSegura(23);
+// mayusculasSegura(23);
 
 //  --- Mayusculas, Nivel : Muy Segura, Longitud : < 23.
 const mayusculasMuySegura = (value) => {
   const serie = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  let pinMayusculas = " ";
+  let mayMuySegura = " ";
   for (let i = 0; i < value; i++) {
-    pinMayusculas += serie.charAt(Math.floor(Math.random() * serie.length));
+    mayMuySegura += serie.charAt(Math.floor(Math.random() * serie.length));
   }
-  console.log(`Mayusculas : Muy Segura : ${pinMayusculas}`);
-  // return result1;
+  return mayMuySegura;
 };
-mayusculasMuySegura(35);
+// mayusculasMuySegura(35);
 
 //   :::::: PIN ::::::
 
@@ -60,7 +55,14 @@ const pinMayusculas = (value) => {
   for (let i = 0; i < value; i++) {
     pinMayusculas += serie.charAt(Math.floor(Math.random() * serie.length));
   }
-  console.log(`Pin : ${pinMayusculas}`);
-  // return result1;
+  return pinMayusculas;
 };
-pinMayusculas(4);
+// pinMayusculas(4);
+
+export {
+  pinMayusculas,
+  mayusculasDebil,
+  mayusculasMedio,
+  mayusculasSegura,
+  mayusculasMuySegura,
+};
