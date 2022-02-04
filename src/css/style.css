@@ -82,6 +82,10 @@ body {
   margin: 10px 0;
   border: solid 1px #0cb7f2;
 }
+.txt-password{
+  text-align: center;
+  font-size: 4vw;
+}
 
 /*  --- Gereneador de contraseñas y configuracion --- */
 .configuraciones {

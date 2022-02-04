@@ -29,8 +29,8 @@
         <div class="configuraciones">
           <div class="configuraciones-top">
             <select name="tipo-seguridad" id="" class="tipo-seguridad">
-              <option value="tipo-1" class="tipo">Contraseña</option>
-              <option value="tipo-2" class="tipo">Pin</option>
+              <option value="pass" class="tipoC">Contraseña</option>
+              <option value="passpin" class="tipoP">Pin</option>
             </select>
 
             <button class="generador-pass">
@@ -44,10 +44,10 @@
 
           <div class="div-container__nivel">
             <select name="nivel-seguridad" class="nivel-seguridad">
-            <option value="" class="option-nivel-seguridad">Debil</option>
-            <option value="" class="option-nivel-seguridad">Media</option>
-            <option value="" class="option-nivel-seguridad">Segura</option>
-            <option value="" class="option-nivel-seguridad">Muy Segura</option>
+            <option value="debil" class="option-nivel-seguridad debil">Debil</option>
+            <option value="media" class="option-nivel-seguridad media">Media</option>
+            <option value="segura" class="option-nivel-seguridad segura">Segura</option>
+            <option value="msegura" class="option-nivel-seguridad msegura">Muy Segura</option>
             </select>
           </div>
         </div>
@@ -55,16 +55,16 @@
           <div class="seriado">
             <ul>
               <li class="opciones-seguridad">
-                <input type="checkbox" name="Numerico" id="may" /> Mayusculas
+                <input type="checkbox" name="Numerico" id="may" value="" /> Mayusculas
               </li>
               <li class="opciones-seguridad">
-                <input type="checkbox" name="" id="min" /> Minusculas
+                <input type="checkbox" name="" id="min" value="" /> Minusculas
               </li>
               <li class="opciones-seguridad">
-                <input type="checkbox" name="" id="num" /> Numeros
+                <input type="checkbox" name="" id="num" value="" /> Numeros
               </li>
               <li class="opciones-seguridad">
-                <input type="checkbox" name="" id="car" /> Caracteres
+                <input type="checkbox" name="" id="car" value="" /> Caracteres
               </li>
             </ul>
           </div>
@@ -150,9 +150,10 @@
       </div>
     </footer>
 
-    <script src="src/js/may.js"></script>
-    <script src="src/js/min.js"></script>
-    <script src="src/js/num.js"></script>
-    <script src="src/js/car.js"></script>
+    <!-- <script src="src/js/may.js" type="module"></script> -->
+    <!-- <script src="src/js/min.js" type="module"></script> -->
+    <!-- <script src="src/js/num.js" type="module"></script> -->
+    <!-- <script src="src/js/car.js" type="module"></script> -->
+    <script src="src/js/conect.js" type="module"></script>
   </body>
 </html>
