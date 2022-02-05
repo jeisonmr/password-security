@@ -2,67 +2,57 @@
 
 // :::: Minusculas Debil, Medio, Segura, Muy Segura ::::
 
-//  --- Minusculas, Nivel : Debil, Longitud : < 8.
-const minusculasDebil = (value) => {
+//  --- Minusculas, Nivel : Debil, Longitud : < 3.
+const minusculasDebil = () => {
   const serie = "abcdefghijklmnopqrstuvwxyz";
   let minDebil = " ";
-  for (let i = 0; i < value; i++) {
+  for (let i = 0; i < 6; i++) {
     minDebil += serie.charAt(Math.floor(Math.random() * serie.length));
   }
-  console.log(`Minusculas : Debil : ${minDebil}`);
-  // return result1;
+  return minDebil;
 };
-minusculasDebil(8);
 
-//  --- Mayusculas, Nivel : Medio, Longitud : < 15.
-const minusculasMedio = (value) => {
+//  --- Mayusculas, Nivel : Medio, Longitud : < 8.
+const minusculasMedio = () => {
   const serie = "abcdefghijklmnopqrstuvwxyz";
   let minMedio = " ";
-  for (let i = 0; i < value; i++) {
+  for (let i = 0; i < 8; i++) {
     minMedio += serie.charAt(Math.floor(Math.random() * serie.length));
   }
-  console.log(`Mayusculas : Medio : ${minMedio}`);
-  // return result1;
+  return minMedio;
 };
-minusculasMedio(15);
 
 //  --- Mayusculas, Nivel : Segura, Longitud : < 23.
-const minusculasSegura = (value) => {
+const minusculasSegura = () => {
   const serie = "abcdefghijklmnopqrstuvwxyz";
   let minSegura = " ";
-  for (let i = 0; i < value; i++) {
+  for (let i = 0; i < 15; i++) {
     minSegura += serie.charAt(Math.floor(Math.random() * serie.length));
   }
-  console.log(`Mayusculas : Segura : ${minSegura}`);
-  // return result1;
+  return minSegura;
 };
-minusculasSegura(23);
 
 //  --- Mayusculas, Nivel : Muy Segura, Longitud : < 23.
-const minusculasMuySegura = (value) => {
+const minusculasMuySegura = () => {
   const serie = "abcdefghijklmnopqrstuvwxyz";
   let minMuySegura = " ";
-  for (let i = 0; i < value; i++) {
+  for (let i = 0; i < 20; i++) {
     minMuySegura += serie.charAt(Math.floor(Math.random() * serie.length));
   }
-  console.log(`Mayusculas : Muy Segura : ${minMuySegura}`);
-  // return result1;
+  return minMuySegura;
 };
-minusculasMuySegura(35);
 
 //   :::::: PIN ::::::
 
 //  Tipo: PIN ****, Nivel: Debil, Longitud: < 4.
-const pinMinusculas = (value) => {
+const pinMinusculas = () => {
   const serie = "abcdefghijklmnopqrstuvwxyz";
   let pinMinusculas = " ";
-  for (let i = 0; i < value; i++) {
+  for (let i = 0; i < 4 ; i++) {
     pinMinusculas += serie.charAt(Math.floor(Math.random() * serie.length));
   }
-  console.log(`Mayusculas : Pin : ${pinMinusculas}`);
-  // return result1;
+  return pinMinusculas;
 };
-pinMinusculas(4);
 
 
 export{

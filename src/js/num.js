@@ -6,7 +6,6 @@ const numDebil = () => {
   window.crypto.getRandomValues(debil);
   return debil;
 };
-// numDebil();
 
 // Tipo: Numerico, Nivel: Medio, Longitud : 4 < 5.
 const numMedio = () => {
@@ -14,7 +13,6 @@ const numMedio = () => {
   window.crypto.getRandomValues(medio);
   return medio;
 };
-// numMedio();
 
 // Tipo: Numerico, Nivel: Seguro, Longitud : 9 < 10.
 const numSeguro = () => {
@@ -22,7 +20,6 @@ const numSeguro = () => {
   window.crypto.getRandomValues(seguro);
   return seguro;
 };
-// numSeguro();
 
 // Tipo: Numerico, Nivel: Muy Seguro, Longitud : 18 < 20.
 const numMuySeguro = () => {
@@ -32,27 +29,25 @@ const numMuySeguro = () => {
   window.crypto.getRandomValues(seguro2);
   return seguro1 + seguro2;
 };
-// numMuySeguro();
 
 //   :::::: PIN ::::::
 
 //  Tipo: PIN ****, Nivel: Debil, Longitud: < 4.
-const pin = () => {
+const pinNumeros = () => {
   let pin = new Uint8Array(1);
   window.crypto.getRandomValues(pin);
 
   if (pin.toString().length == 2) {
     let r = Math.floor(Math.random() * (99 - 10) + 10);
-    console.log(`Numero : PIN :  ${pin + r}`);
+    return pin + r;
   } else if (pin.toString().length == 3) {
     let r = Math.floor(Math.random() * (9 - 0) + 0);
-    console.log(`Numero : PIN :  ${pin + r}`);
+    return pin + r;
   }
 };
-// pin();
 
 export{
-  pin,
+  pinNumeros,
   numDebil,
   numMedio,
   numSeguro,

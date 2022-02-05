@@ -3,62 +3,56 @@
 // :::: Caracteres Debil, Medio, Segura, Muy Segura ::::
 
 //  --- Caracteres, Nivel : Debil, Longitud : < 8.
-const cararacteresDebil = (value) => {
+const cararacteresDebil = () => {
   const serie = "!#$%&/(=?)¡¿'-_[+}:{";
   let carDebil = " ";
-  for (let i = 0; i < value; i++) {
+  for (let i = 0; i < 6 ; i++) {
     carDebil += serie.charAt(Math.floor(Math.random() * serie.length));
   }
   return carDebil;
 };
-// cararacteresDebil(5);
 
 //  --- Caracteres, Nivel : Medio, Longitud : < 15.
-const caracteresMedio = (value) => {
+const caracteresMedio = () => {
   const serie = "!#$%&/(=?)¡¿'-_[+}:{";
   let carMedio = " ";
-  for (let i = 0; i < value; i++) {
+  for (let i = 0; i < 8; i++) {
     carMedio += serie.charAt(Math.floor(Math.random() * serie.length));
   }
   return carMedio;
 };
-// caracteresMedio(10);
 
 //  --- Caracteres, Nivel : Segura, Longitud : < 23.
-const caracteresSegura = (value) => {
+const caracteresSegura = () => {
   const serie = "!#$%&/(=?)¡¿'-_[+}:{";
   let carSegura = " ";
-  for (let i = 0; i < value; i++) {
+  for (let i = 0; i < 15; i++) {
     carSegura += serie.charAt(Math.floor(Math.random() * serie.length));
   }
   return carSegura;
 };
-// caracteresSegura(18);
 
 //  --- Caracteres, Nivel : Muy Segura, Longitud : < 23.
-const caracteresMuySegura = (value) => {
+const caracteresMuySegura = () => {
   const serie = "!#$%&/(=?)¡¿'-_[+}:{";
   let carMuySegura = " ";
-  for (let i = 0; i < value; i++) {
+  for (let i = 0; i < 20; i++) {
     carMuySegura += serie.charAt(Math.floor(Math.random() * serie.length));
   }
   return carMuySegura;
 };
-// caracteresMuySegura(25);
 
 //   :::::: PIN ::::::
 
 //  Tipo: PIN ****, Nivel: Debil, Longitud: < 4.
-const pinCaracteres = (value) => {
+const pinCaracteres = () => {
   const serie = "!#$%&/(=?)¡¿'-_[+}:{";
-  let pinCaract = " ";
-  for (let i = 0; i < value; i++) {
-    pinCaract += serie.charAt(Math.floor(Math.random() * serie.length));
+  let pinCaracteres = " ";
+  for (let i = 0; i < 4; i++) {
+    pinCaracteres += serie.charAt(Math.floor(Math.random() * serie.length));
   }
-  // console.log(`Pin : ${pinCaracteres}`);
-  return pinCaract;
+  return pinCaracteres;
 };
-// pinCaracteres(4);
 
 export {
   pinCaracteres,

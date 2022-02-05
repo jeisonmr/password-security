@@ -3,10 +3,10 @@
 // :::: MAYUSCULAS Debil, Medio, Segura, Muy Segura ::::
 
 //  --- Mayusculas, Nivel : Debil, Longitud : < 8.
-const mayusculasDebil = (value) => {
+const mayusculasDebil = () => {
   const serie = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let mayDebil = " ";
-  for (let i = 0; i < value; i++) {
+  for (let i = 0; i < 3; i++) {
     mayDebil += serie.charAt(Math.floor(Math.random() * serie.length));
   }
   return mayDebil;
@@ -14,10 +14,10 @@ const mayusculasDebil = (value) => {
 // mayusculasDebil(8);
 
 //  --- Mayusculas, Nivel : Medio, Longitud : < 15.
-const mayusculasMedio = (value) => {
+const mayusculasMedio = () => {
   const serie = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let mayMedio = " ";
-  for (let i = 0; i < value; i++) {
+  for (let i = 0; i < 8; i++) {
     mayMedio += serie.charAt(Math.floor(Math.random() * serie.length));
   }
   return mayMedio;
@@ -25,10 +25,10 @@ const mayusculasMedio = (value) => {
 // mayusculasMedio(15);
 
 //  --- Mayusculas, Nivel : Segura, Longitud : < 23.
-const mayusculasSegura = (value) => {
+const mayusculasSegura = () => {
   const serie = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let maySegura = " ";
-  for (let i = 0; i < value; i++) {
+  for (let i = 0; i < 15; i++) {
     maySegura += serie.charAt(Math.floor(Math.random() * serie.length));
   }
   return maySegura;
@@ -36,10 +36,10 @@ const mayusculasSegura = (value) => {
 // mayusculasSegura(23);
 
 //  --- Mayusculas, Nivel : Muy Segura, Longitud : < 23.
-const mayusculasMuySegura = (value) => {
+const mayusculasMuySegura = () => {
   const serie = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let mayMuySegura = " ";
-  for (let i = 0; i < value; i++) {
+  for (let i = 0; i < 20; i++) {
     mayMuySegura += serie.charAt(Math.floor(Math.random() * serie.length));
   }
   return mayMuySegura;
@@ -49,15 +49,14 @@ const mayusculasMuySegura = (value) => {
 //   :::::: PIN ::::::
 
 //  Tipo: PIN ****, Nivel: Debil, Longitud: < 4.
-const pinMayusculas = (value) => {
+const pinMayusculas = () => {
   const serie = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let pinMayusculas = " ";
-  for (let i = 0; i < value; i++) {
+  for (let i = 0; i < 4; i++) {
     pinMayusculas += serie.charAt(Math.floor(Math.random() * serie.length));
   }
   return pinMayusculas;
 };
-// pinMayusculas(4);
 
 export {
   pinMayusculas,
