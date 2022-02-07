@@ -3,9 +3,9 @@
 // :::: Caracteres Debil, Medio, Segura, Muy Segura ::::
 
 //  --- Caracteres, Nivel : Debil, Longitud : < 8.
-const cararacteresDebil = () => {
+const cararacteresDebil = (nivel) => {
   const serie = "!#$%&/(=?)¡¿'-_[+}:{";
-  let carDebil = " ";
+  let carDebil = "";
   for (let i = 0; i < 6 ; i++) {
     carDebil += serie.charAt(Math.floor(Math.random() * serie.length));
   }
@@ -15,7 +15,7 @@ const cararacteresDebil = () => {
 //  --- Caracteres, Nivel : Medio, Longitud : < 15.
 const caracteresMedio = () => {
   const serie = "!#$%&/(=?)¡¿'-_[+}:{";
-  let carMedio = " ";
+  let carMedio = "";
   for (let i = 0; i < 8; i++) {
     carMedio += serie.charAt(Math.floor(Math.random() * serie.length));
   }
@@ -25,7 +25,7 @@ const caracteresMedio = () => {
 //  --- Caracteres, Nivel : Segura, Longitud : < 23.
 const caracteresSegura = () => {
   const serie = "!#$%&/(=?)¡¿'-_[+}:{";
-  let carSegura = " ";
+  let carSegura = "";
   for (let i = 0; i < 15; i++) {
     carSegura += serie.charAt(Math.floor(Math.random() * serie.length));
   }
@@ -35,7 +35,7 @@ const caracteresSegura = () => {
 //  --- Caracteres, Nivel : Muy Segura, Longitud : < 23.
 const caracteresMuySegura = () => {
   const serie = "!#$%&/(=?)¡¿'-_[+}:{";
-  let carMuySegura = " ";
+  let carMuySegura = "";
   for (let i = 0; i < 20; i++) {
     carMuySegura += serie.charAt(Math.floor(Math.random() * serie.length));
   }
@@ -47,7 +47,7 @@ const caracteresMuySegura = () => {
 //  Tipo: PIN ****, Nivel: Debil, Longitud: < 4.
 const pinCaracteres = () => {
   const serie = "!#$%&/(=?)¡¿'-_[+}:{";
-  let pinCaracteres = " ";
+  let pinCaracteres = "";
   for (let i = 0; i < 4; i++) {
     pinCaracteres += serie.charAt(Math.floor(Math.random() * serie.length));
   }

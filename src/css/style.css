@@ -99,10 +99,13 @@ body {
 }
 .configuraciones-top {
   width: 100%;
-  height: 60px;
+  height: 80px;
   position: relative;
   display: flex;
   flex-direction: row;
+}
+.configuraciones-top > button{
+  justify-content: center;
 }
 /*  --- Tipo de pass, Generar pass, Copiar pass --- */
 .tipo-seguridad {
@@ -122,8 +125,9 @@ body {
   font-weight: bold;
 }
 .generador-pass {
-  position: absolute;
-  margin: 15px 50%;
+  position: relative;
+  /* margin-left:50%; */
+  margin-right:50%;
 
   background-color: #ffffff;
   color: #ffffff;
@@ -139,7 +143,7 @@ body {
   right: 0;
   margin: 15px 15px 0 0;
 
-  width: 110px;
+  width: 130px;
   height: 40px;
 
   background-color: #0cb7f2;

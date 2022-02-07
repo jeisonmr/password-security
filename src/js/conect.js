@@ -23,38 +23,40 @@ let chk_min = document.getElementById("min");
 let chk_num = document.getElementById("num");
 let chk_car = document.getElementById("car");
 
-// Vevtor de combinaciones.
-let array = new Array();
+// Variables para combinaciones.
+let globalMay, globalMin,globalNum, globalCar;
 
 
-console.log(parseInt(numDebil()/2));
-
-txt_password.value = "";
 
 // CONTRASEÑA :::
 function validarMayusculas(tipo, nivel){
+  
     // Mayusculas Debil.
     const valPassMayDebil = () => {
       if (chk_may.checked && tipo_seguridad.value == "pass" && nivel_seguridad.value == "debil") {
         txt_password.value = mayusculasDebil();
+        globalMay = mayusculasDebil();
       }
     }
     // Mayusculas Medio.
     const valPassMayMedia = () => {
       if (chk_may.checked && tipo_seguridad.value == "pass" && nivel_seguridad.value == "media") {
         txt_password.value = mayusculasMedio();
+        globalMay = mayusculasMedio();
       }
     };
      // Mayusculas Segura.
     const valPassMaySegura = () => {
       if (chk_may.checked && tipo_seguridad.value == "pass" && nivel_seguridad.value == "segura") {
         txt_password.value = mayusculasSegura();
+        globalMay = mayusculasSegura();
       }
     };
      // Mayusculas Muy Segura.
     const valPassMayMuySegura = () => {
       if (chk_may.checked && tipo_seguridad.value == "pass" && nivel_seguridad.value == "msegura") {
         txt_password.value = mayusculasMuySegura();
+        globalMay = mayusculasMuySegura();
       }
     };
     valPassMayDebil(tipo, nivel);
@@ -63,10 +65,12 @@ function validarMayusculas(tipo, nivel){
     valPassMayMuySegura(tipo, nivel);
 }
 function validarMinusculas(tipo, nivel){
+
   // Minusculas Debil.
   const valPassMinDebil = () => {
     if (chk_min.checked && tipo_seguridad.value == "pass" && nivel_seguridad.value == "debil") {
       txt_password.value = minusculasDebil();
+      globalMin = minusculasDebil();
     }
   };
 
@@ -74,6 +78,7 @@ function validarMinusculas(tipo, nivel){
   const valPassMinMedia = () => {
     if (chk_min.checked && tipo_seguridad.value == "pass" && nivel_seguridad.value == "media") {
       txt_password.value = minusculasMedio();
+      globalMin = minusculasMedio()
     }
   };
 
@@ -81,6 +86,7 @@ function validarMinusculas(tipo, nivel){
    const valPassMinSegura = () => {
     if (chk_min.checked && tipo_seguridad.value == "pass" && nivel_seguridad.value == "segura") {
       txt_password.value = minusculasSegura();
+      globalMin = minusculasSegura();
     }
   };
 
@@ -88,6 +94,7 @@ function validarMinusculas(tipo, nivel){
    const valPassMinMuySegura = () => {
     if (chk_min.checked && tipo_seguridad.value == "pass" && nivel_seguridad.value == "msegura") {
       txt_password.value = minusculasMuySegura();
+      globalMin = minusculasMuySegura();
     }
   };
 
@@ -101,6 +108,7 @@ function validarNumerico(tipo, nivel) {
   const valPassNumDebil = () => {
     if (chk_num.checked && tipo_seguridad.value == "pass" && nivel_seguridad.value == "debil") {
       txt_password.value = numDebil();
+      globalNum = numDebil();
     }
   };
 
@@ -108,6 +116,7 @@ function validarNumerico(tipo, nivel) {
   const valPassNumMedia = () => {
     if (chk_num.checked && tipo_seguridad.value == "pass" && nivel_seguridad.value == "media") {
       txt_password.value = numMedio();
+      globalNum = numMedio();
     }
   };
 
@@ -115,6 +124,7 @@ function validarNumerico(tipo, nivel) {
   const valPassNumSegura = () => {
     if (chk_num.checked && tipo_seguridad.value == "pass" && nivel_seguridad.value == "segura") {
       txt_password.value = numSeguro();
+      globalNum = numSeguro();
     }
   };
 
@@ -122,6 +132,7 @@ function validarNumerico(tipo, nivel) {
   const valPassNumMuySegura = () => {
     if (chk_num.checked && tipo_seguridad.value == "pass" && nivel_seguridad.value == "msegura") {
       txt_password.value = numMuySeguro();
+      globalNum = numMuySeguro();
     }
   };
 
@@ -135,6 +146,7 @@ function validarCaracteres(tipo, nivel) {
   const valPassMinDebil = () => {
     if (chk_car.checked && tipo_seguridad.value == "pass" && nivel_seguridad.value == "debil") {
       txt_password.value = cararacteresDebil();
+      globalCar = cararacteresDebil();
     }
   };
 
@@ -142,6 +154,7 @@ function validarCaracteres(tipo, nivel) {
   const valPassMinMedia = () => {
     if (chk_car.checked && tipo_seguridad.value == "pass" && nivel_seguridad.value == "media") {
       txt_password.value = caracteresMedio();
+      globalCar = caracteresMedio();
     }
   };
 
@@ -149,6 +162,7 @@ function validarCaracteres(tipo, nivel) {
    const valPassMinSegura = () => {
     if (chk_car.checked && tipo_seguridad.value == "pass" && nivel_seguridad.value == "segura") {
       txt_password.value = caracteresSegura();
+      globalCar = caracteresSegura()
     }
   };
 
@@ -156,6 +170,7 @@ function validarCaracteres(tipo, nivel) {
    const valPassMinMuySegura = () => {
     if (chk_car.checked && tipo_seguridad.value == "pass" && nivel_seguridad.value == "msegura") {
       txt_password.value = caracteresMuySegura();
+      globalCar = caracteresMuySegura();
     }
   };
 
@@ -164,21 +179,40 @@ function validarCaracteres(tipo, nivel) {
   valPassMinSegura(tipo, nivel);
   valPassMinMuySegura(tipo, nivel);
 }
-
-
 function valCombinator(){
-  if (chk_may.checked && chk_min.checked && chk_num.checked && chk_car.checked && tipo_seguridad.value == "pass") {
-    switch (nivel_seguridad.value) {
-      case "debil":
-      array[0]= mayusculasDebil();
-      array[1]= parseInt(numDebil());
-      array[2]= minusculasDebil();
-      array[3]= cararacteresDebil();
-      // console.log(array[0], array[1], array[2], array[3])
-      console.log(array[0]+array[1]+array[2]+array[3]);
-      txt_password.value = array[0]+array[1]+array[2]+array[3];
-        break;
-    }
+
+  const serie = (`${globalMay+globalCar+globalMin+globalNum}`);
+  let mayDebil = "";
+  globalMay="";
+  globalMin="";
+  globalNum="";
+  globalCar="";
+
+  switch (nivel_seguridad.value) {
+    case "debil":
+      for (let i = 0; i < 3; i++) {
+        mayDebil += serie.charAt(Math.floor(Math.random() * serie.length));
+      }
+    txt_password.value = mayDebil;
+    break;
+    case "media":
+      for (let i = 0; i < 6; i++) {
+        mayDebil += serie.charAt(Math.floor(Math.random() * serie.length));
+      }
+    txt_password.value = mayDebil;
+    break;
+    case "segura":
+      for (let i = 0; i < 13; i++) {
+        mayDebil += serie.charAt(Math.floor(Math.random() * serie.length));
+      }
+    txt_password.value = mayDebil;
+    break;
+    case "msegura":
+      for (let i = 0; i < 18; i++) {
+        mayDebil += serie.charAt(Math.floor(Math.random() * serie.length));
+      }
+    txt_password.value = mayDebil;
+    break;
   }
 }
 
@@ -189,25 +223,21 @@ function validarPin(tipo){
       txt_password.value = pinMayusculas();
     }
   };
-
   const valPinMin = () => {
     if (chk_min.checked && tipo_seguridad.value == "passpin") {
       txt_password.value = pinMinusculas();
     }
   };
-
   const valPinNum = () => {
     if (chk_num.checked && tipo_seguridad.value == "passpin") {
       txt_password.value = pinNumeros();
     }
   };
-
   const valPinCar = () => {
     if (chk_car.checked && tipo_seguridad.value == "passpin") {
       txt_password.value = pinCaracteres();
     }
   };
-
   const hideNivelSecurity = () =>{
     if (tipo_seguridad.value == 'passpin'){
       nivel_seguridad.style = "visibility: hidden;";
@@ -215,9 +245,6 @@ function validarPin(tipo){
       nivel_seguridad.style = "visibility: visible";
     }
   };
-
-
-
   valPinMay(tipo);
   valPinMin(tipo);
   valPinNum(tipo);
@@ -226,6 +253,7 @@ function validarPin(tipo){
 }
 
 
+txt_password.value = "";
 
 btn_generar.addEventListener("click", () => {
   
@@ -235,48 +263,13 @@ btn_generar.addEventListener("click", () => {
   validarMinusculas(tipo_seguridad, nivel_seguridad);
   validarNumerico(tipo_seguridad, nivel_seguridad);
   validarCaracteres(tipo_seguridad, nivel_seguridad);
-  valCombinator(tipo_seguridad, nivel_seguridad);
+  valCombinator();
   // Pin
-  validarPin(tipo_seguridad);
-
-  // Combinado
-
-    console.log(...array);
-  
+  validarPin(tipo_seguridad);    
 });
 
+btn_copiar.addEventListener('click', function(){
+  txt_password.select();
+  document.execCommand('copy');
+});
 
-
-
-// if (chk_num.checked || chk_min.checked || chk_car.checked) {
-//   switch (nivel_seguridad.value) {
-//       case "debil":
-//         array[0]= mayusculasDebil();
-//         array[1]= parseInt(numDebil());
-//         array[2]= minusculasDebil();
-//         array[3]= cararacteresDebil();
-//         txt_password.value =  array[3];
-//       break;
-//       case "media":
-//         array[2]= mayusculasMedio();
-//         array[1]= parseInt(numMedio());
-//         array[3]= minusculasMedio();
-//         array[0]= caracteresMedio();
-//       break
-//       case "segura":
-//         array[2]= mayusculasSegura();
-//         array[0]= parseInt(numSeguro());
-//         array[3]= minusculasSegura();
-//         array[1]= caracteresMuySegura();
-//       break;
-//       case "msegura":
-//         array[3]= mayusculasDebil();
-//         array[2]= parseInt(numMedio());
-//         array[0]= minusculasSegura();
-//         array[1]= caracteresMuySegura();
-//       break;
-//     default:
-
-//       break;
-//   }
-// }
