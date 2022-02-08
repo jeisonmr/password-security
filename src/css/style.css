@@ -84,7 +84,10 @@ body {
 }
 .txt-password{
   text-align: center;
-  font-size: 2vw;
+  font-size: 3.6vw;
+  background-color: #ffffff;
+  color: #54d0fa;
+  user-select: none;
 }
 
 /*  --- Gereneador de contraseñas y configuracion --- */
@@ -103,17 +106,15 @@ body {
   position: relative;
   display: flex;
   flex-direction: row;
+  /* display: grid;
+  grid-template-columns: repeat(3, 33.3%); */
 }
-.configuraciones-top > button{
-  justify-content: center;
-}
+
 /*  --- Tipo de pass, Generar pass, Copiar pass --- */
 .tipo-seguridad {
-  /* position: absolute; */
-  left: 0;
-  margin: 15px 0 0 15px;
+  margin: auto;
 
-  width: 130px;
+  width: 125px;
   height: 40px;
 
   background-color: #0cb7f2;
@@ -125,9 +126,7 @@ body {
   font-weight: bold;
 }
 .generador-pass {
-  position: relative;
-  /* margin-left:50%; */
-  margin-right:50%;
+  margin: auto;
 
   background-color: #ffffff;
   color: #ffffff;
@@ -139,13 +138,9 @@ body {
   height: 60px;
 }
 .copiar-pass {
-  position: absolute;
-  right: 0;
-  margin: 15px 15px 0 0;
-
-  width: 130px;
+  width: 125px;
   height: 40px;
-
+  margin: auto !important;
   background-color: #0cb7f2;
   color: #ffffff;
   border: none;

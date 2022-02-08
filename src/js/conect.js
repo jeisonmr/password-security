@@ -135,7 +135,7 @@ function validarNumerico(tipo, nivel) {
       globalNum = numMuySeguro();
     }
   };
-
+  
   valPassNumDebil(tipo, nivel);
   valPassNumMedia(tipo, nivel);
   valPassNumSegura(tipo, nivel);
@@ -182,7 +182,7 @@ function validarCaracteres(tipo, nivel) {
 function valCombinator(){
 
   const serie = (`${globalMay+globalCar+globalMin+globalNum}`);
-  let mayDebil = "";
+  let password = "";
   globalMay="";
   globalMin="";
   globalNum="";
@@ -191,29 +191,30 @@ function valCombinator(){
   switch (nivel_seguridad.value) {
     case "debil":
       for (let i = 0; i < 3; i++) {
-        mayDebil += serie.charAt(Math.floor(Math.random() * serie.length));
+        password += serie.charAt(Math.floor(Math.random() * serie.length));
       }
-    txt_password.value = mayDebil;
+    txt_password.value = password;
     break;
     case "media":
       for (let i = 0; i < 6; i++) {
-        mayDebil += serie.charAt(Math.floor(Math.random() * serie.length));
+        password += serie.charAt(Math.floor(Math.random() * serie.length));
       }
-    txt_password.value = mayDebil;
+    txt_password.value = password;
     break;
     case "segura":
       for (let i = 0; i < 13; i++) {
-        mayDebil += serie.charAt(Math.floor(Math.random() * serie.length));
+        password += serie.charAt(Math.floor(Math.random() * serie.length));
       }
-    txt_password.value = mayDebil;
+    txt_password.value = password;
     break;
     case "msegura":
       for (let i = 0; i < 18; i++) {
-        mayDebil += serie.charAt(Math.floor(Math.random() * serie.length));
+        password += serie.charAt(Math.floor(Math.random() * serie.length));
       }
-    txt_password.value = mayDebil;
+    txt_password.value = password;
     break;
   }
+  return password;
 }
 
 // PIN
@@ -238,13 +239,13 @@ function validarPin(tipo){
       txt_password.value = pinCaracteres();
     }
   };
-  const hideNivelSecurity = () =>{
-    if (tipo_seguridad.value == 'passpin'){
-      nivel_seguridad.style = "visibility: hidden;";
-    }else{
-      nivel_seguridad.style = "visibility: visible";
-    }
-  };
+  // const hideNivelSecurity = () =>{
+  //   if (tipo_seguridad.value == 'passpin'){
+  //     nivel_seguridad.style = "visibility: hidden;";
+  //   }else{
+  //     nivel_seguridad.style = "visibility: visible";
+  //   }
+  // };
   valPinMay(tipo);
   valPinMin(tipo);
   valPinNum(tipo);
@@ -269,7 +270,8 @@ btn_generar.addEventListener("click", () => {
 });
 
 btn_copiar.addEventListener('click', function(){
+
   txt_password.select();
   document.execCommand('copy');
 });
-
+wbfQWCwbfQWC
